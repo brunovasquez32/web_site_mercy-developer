@@ -1,0 +1,58 @@
+<img src="assets/eslogan.jpg" alt="" style="width: 100%;" height="350">
+<b><h1 style="text-align: center;">Soluciones rápidas, tecnología sin límites</h1></b><br>
+
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <h1>Formulario Para Consultas</h1>
+      <div class="col-md-12">
+        <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control"  
+                formControlName="nombre" id="nombre" 
+                aria-describedby="nombrelHelp" 
+                placeholder="Ingrese Nombre">
+              <small class="form-text text-muted">Debe ingresar un nombre. No se aceptan símbolos.</small>
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" class="form-control" 
+                formControlName="apellido" id="apellido" 
+                aria-describedby="apellidoHelp" 
+                placeholder="Ingrese Apellido">
+              <small id="apellidoHelp" class="form-text text-muted">Debe ingresar un nombre. No se aceptan símbolos.</small>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                <input type="text" class="form-control"
+                formControlName="mensaje" id="mensaje" 
+                aria-describedby="mensajeHelp" 
+                placeholder="Ingrese Mensaje">
+                <small id="apellidoHelp" class="form-text text-muted">Debe ingresar un mensaje.</small>
+            </div>
+            <button type="submit" class="btn btn-primary" >Enviar</button>
+          </form>
+      </div>
+    </div>
+</div>
