@@ -1,1 +1,42 @@
-<p>ubicanos works!</p>
+
+<br><b><h1 style="text-align: center;">¿DONDE ESTAMOS?</h1></b><br>
+
+
+<div class="container" style="text-align: center;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.99061100219!2d-70.29413742498787!3d-18.48408448260238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915aa997e88ae0e3%3A0x3d94d0eaeff916ef!2sCFT%20Estatal%20Arica%20y%20Parinacota!5e0!3m2!1ses!2scl!4v1730080104372!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div><br><br>
+
+<div class="container">
+    <div class="row">
+        <h1>Formulario Para Consultas</h1>
+      <div class="col-md-12">
+        <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control"  
+                formControlName="nombre" id="nombre" 
+                aria-describedby="nombrelHelp" 
+                placeholder="Ingrese Nombre">
+              <small class="form-text text-muted">Debe ingresar un nombre. No se aceptan símbolos.</small>
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" class="form-control" 
+                formControlName="apellido" id="apellido" 
+                aria-describedby="apellidoHelp" 
+                placeholder="Ingrese Apellido">
+              <small id="apellidoHelp" class="form-text text-muted">Debe ingresar un nombre. No se aceptan símbolos.</small>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                <input type="text" class="form-control"
+                formControlName="mensaje" id="mensaje" 
+                aria-describedby="mensajeHelp" 
+                placeholder="Ingrese Mensaje">
+                <small id="apellidoHelp" class="form-text text-muted">Debe ingresar un mensaje.</small>
+            </div>
+            <button type="submit" class="btn btn-primary" >Enviar</button>
+          </form>
+      </div>
+    </div>
+</div> <br>
