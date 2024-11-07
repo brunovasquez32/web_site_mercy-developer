@@ -13,7 +13,9 @@ export class InicioComponent {
     this.formularioForm = this.formBuilder.group({
       nombre: '',
       apellido: '',
-      mensaje: ''
+      mensaje: '',
+      correo:'',
+      telefono:''
     });
   }
 

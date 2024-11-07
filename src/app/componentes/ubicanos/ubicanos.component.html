@@ -7,36 +7,55 @@
 </div><br><br>
 
 <div class="container">
-    <div class="row">
-        <h1>Formulario Para Consultas</h1>
-      <div class="col-md-12">
-        <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" class="form-control"  
-                formControlName="nombre" id="nombre" 
-                aria-describedby="nombrelHelp" 
-                placeholder="Ingrese Nombre">
-              <small class="form-text text-muted">Debe ingresar un nombre. No se aceptan símbolos.</small>
-            </div>
-            <div class="form-group">
-              <label for="apellido">Apellido</label>
-              <input type="text" class="form-control" 
-                formControlName="apellido" id="apellido" 
-                aria-describedby="apellidoHelp" 
-                placeholder="Ingrese Apellido">
-              <small id="apellidoHelp" class="form-text text-muted">Debe ingresar un nombre. No se aceptan símbolos.</small>
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                <input type="text" class="form-control"
-                formControlName="mensaje" id="mensaje" 
-                aria-describedby="mensajeHelp" 
-                placeholder="Ingrese Mensaje">
-                <small id="apellidoHelp" class="form-text text-muted">Debe ingresar un mensaje.</small>
-            </div>
-            <button type="submit" class="btn btn-primary" >Enviar</button>
-          </form>
+  <div class="row">
+      <h1>Formulario Para Consultas</h1>
+    <div class="col-md-12">
+      <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control"  
+              formControlName="nombre" id="nombre" 
+              aria-describedby="nombrelHelp" 
+              placeholder="Ingrese su Nombre">
+            <small class="form-text text-muted">Debe ingresar un nombre. No se aceptan símbolos.</small>
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" class="form-control" 
+              formControlName="apellido" id="apellido" 
+              aria-describedby="apellidoHelp" 
+              placeholder="Ingrese su Apellido">
+            <small id="apellidoHelp" class="form-text text-muted">Debe ingresar un nombre. No se aceptan símbolos.</small>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control"
+            formControlName="correo" id="correo" 
+            aria-describedby="correoHelp" 
+            placeholder="Ingrese su Correo Electrónico">
+            <small id="correoHelp" class="form-text text-muted">Debe ingresar un correo electrónico.</small>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Teléfono</label>
+          <input type="number" class="form-control"
+          formControlName="telefono" id="telefono" 
+          aria-describedby="telefonoHelp" 
+          placeholder="Ingrese su Número Telefónico">
+          <small id="telefono" class="form-text text-muted">Debe ingresar un número telefónico.</small>
       </div>
+          <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+              <input type="text" class="form-control"
+              formControlName="mensaje" id="mensaje" 
+              aria-describedby="mensajeHelp" 
+              placeholder="Ingrese Mensaje">
+              <small id="apellidoHelp" class="form-text text-muted">Debe ingresar un mensaje.</small>
+          </div>
+          <button type="submit" class="btn btn-primary" >Enviar</button>
+        </form>
     </div>
+    <div class="row" style="color: blue; font-weight: bold; text-align: center;">
+      <p *ngIf="datos_formularios != null">Hola {{datos_formularios.nombre}}  {{datos_formularios.apellido}},su mensaje ha sido enviado correctamente.</p>
+  </div>
+  </div>
 </div> <br>

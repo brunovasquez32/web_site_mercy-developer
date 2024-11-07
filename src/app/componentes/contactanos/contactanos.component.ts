@@ -14,7 +14,9 @@ constructor(private formBuilder: FormBuilder){
     this.formularioForm = this.formBuilder.group({
       nombre: '',
       apellido: '',
-      mensaje: ''
+      mensaje: '',
+      correo:'',
+      telefono:'',
     });
   }
 
@@ -30,6 +32,7 @@ constructor(private formBuilder: FormBuilder){
     console.log('Ingresamos a la función del botón')
     this.datos_formularios = this.formularioForm.value;
     console.log(this.datos_formularios);
+    this.formularioForm.reset()
   }
 
 }
